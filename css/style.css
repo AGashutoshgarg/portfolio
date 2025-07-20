@@ -1,0 +1,242 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Add this in style.css (global level) */
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: #f8f8f5;  /* Dove White */
+  font-family: 'Barlow Condensed', 'Bahnschrift Light Condensed', sans-serif;
+  color: #222;
+  line-height: 1.6;
+  padding: 0 1.5rem;
+}
+
+/* SECTIONS */
+section {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+section:not(#home) {
+  text-align: justify;
+  line-height: 1.6;
+  word-spacing: 0.5px;
+}
+
+
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 2rem 0;
+}
+/* HOME SECTION */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#home img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1rem 0;
+  margin-left: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  filter: grayscale(90%);
+}
+
+
+#home h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px;
+}
+#home h1::after {
+  content: '';
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  width: 60%;
+  height: 3px; /* thickness */
+  background-color: #fcd200; /* underline color */
+  border-radius: 5px;
+}
+
+#home h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  max-width: 600px;
+  font-size: 1rem;
+}
+/* BUTTONS CONTAINER */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* COMMON STYLE FOR ALL CIRCULAR BUTTONS */
+.circle-btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* HOVER EFFECT */
+.circle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* COLORS */
+.yellow { background-color: #f4b400; }
+.red { background-color: #ea4335; }
+.blue { background-color: #00bcd4; }
+
+/* Sticky Mini Profile (Initially Hidden) */
+.sticky-profile {
+  text-decoration: none;
+  cursor: pointer;              /* 👉 Clickable cursor */
+  color: inherit;  
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 8px 14px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(-20px);
+  z-index: 999;
+  pointer-events: none; /* prevent accidental clicks */
+  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.5);  /* ✅ translucent white */
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.sticky-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(90%);
+}
+
+.sticky-profile span {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* When active */
+.sticky-profile.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+/* ✅ On hover — full white background */
+.sticky-profile:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+/* Yellow circle behind cursor */
+.cursor-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 204, 0, 0.3);  /* light yellow with 30% opacity */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.05s ease;
+}
+/* Dot Navigation Container */
+.dot-nav {
+  position: fixed;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3px;
+  border-radius: 30px;
+  
+  backdrop-filter: blur(10px);  /* ✅ Optional glass effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);  /* Optional soft shadow */
+}
+
+/* Individual Dots */
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover Effect: Tooltip Text */
+.dot::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* Show Tooltip on Hover */
+.dot:hover::after {
+  opacity: 1;
+}
+
+/* Active Dot (selected section) */
+.dot.active {
+  background-color: white;
+}
+

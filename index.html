@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ashutosh Garg | Project Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="image/portfolio.png">
+
+
+</head>
+<body>
+  <!-- Sticky Mini Profile -->
+<a href="#home" class="sticky-profile">
+  <img src="image/ashu.jpg" alt="Ashutosh Garg" />
+  <span>Ashutosh Garg</span>
+</a>
+
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Ashutosh Garg</h1>
+    <h3>Project Manager | Enabling Tech-Led Project Delivery | ERP • Agile • SDLC</h3>
+    <!--<img src="image/ashu.jpg" alt="Ashutosh Garg Profile" width="200" class="profile-img">-->
+    <img src="image/ashu.jpg" alt="Ashutosh Garg Profile" width="200" style="box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);">
+
+    <p>Welcome to my portfolio. I’m Ashutosh Garg — a project manager focused on structured ERP/CRM delivery, agile SDLC workflows, and scalable product execution.</p>
+    <div class="home-buttons">
+  <a href="#resume" class="circle-btn yellow">Resume</a>
+  <a href="#projects" class="circle-btn red">Projects</a>
+  <a href="#contact" class="circle-btn blue">Contact</a>
+</div>
+
+
+  </section>
+
+  <hr>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am currently working as a Project Manager at Vallesoft, an IT firm developing ERP and CRM software solutions. With a background in engineering and 3+ years of experience, I have successfully led SaaS product implementations, driven cross-functional coordination, and ensured on-time project delivery using Agile methodology.
+    </p>
+    <p>
+      Previously at Choice Consultancy, I contributed to the Jal Jeevan Mission by delivering a tech-enabled project monitoring solution that improved speed, accuracy, and transparency. I also leveraged RPA tools like UiPath to automate reporting workflows and enhance operational efficiency.
+    </p>
+    <p>
+      I believe in combining structured processes with technology to deliver scalable, business-aligned solutions.
+    </p>
+  </section>
+<hr>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <!-- Project 1 -->
+  <div>
+    <h3>1. VSCRM</h3>
+    <p>
+      Led the end-to-end developmenmt, launch and after support of CRM system for brands like VLCC(India & MEA), Alive wellness and Minus.
+    </p>
+  </div>
+
+  <!-- Project 2 -->
+  <div>
+    <h3>2. School ERP</h3>
+    <p>
+      Coordinated feature enhancements and client demos for a custom-built school management system. Mapped user requirements and monitored delivery milestones across teams.
+    </p>
+  </div>
+
+  <!-- Project 3 -->
+  <div>
+    <h3>3. Jal Jeevan Mission by Government of India</h3>
+    <p>
+      Led end-to-end development and ongoing management of a project monitoring system for Jal Jeevan Mission, used across Maharashtra and Rajasthan. Included BOQ tracking, dashboards, site-level coordination, and UiPath-based reporting automation.
+    </p>
+  </div>
+
+  <!-- Project 4 (Optional)
+  <div>
+    <h3>4. School ERP Deployment - Vallesoft</h3>
+    <p>
+      Coordinated feature enhancements and client demos for a custom-built school management system. Mapped user requirements and monitored delivery milestones across teams.
+    </p>
+  </div>-->
+
+</section>
+<hr>
+
+<!-- Skills Section -->
+<section id="skills">
+  <h2>Skills & Tools</h2>
+
+  <!-- Technical Skills -->
+  <h3>Technical Skills</h3>
+  <ul>
+    <li>HTML, CSS, JavaScript (currently sharpening through practical implementation)</li>
+    <li>SQL</li>
+    <li>RPA (UiPath)</li>
+    <li>Zoho Analytics (Dashboards & Reports)</li>
+    <li>PowerBi</li>
+    <li>Tableau</li>
+    <li>MS Office</li>
+  </ul>
+
+  <!-- Management & Domain Skills -->
+  <h3>Project Management & Domain</h3>
+  <ul>
+    <li>Agile Methodology, Scrum Ceremonies</li>
+    <li>Requirement Gathering & SDLC Execution</li>
+    <li>Jira & Task Management Tools</li>
+    <li>Client Coordination & Communication</li>
+    <li>Root Cause Analysis & Compliance Planning</li>
+  </ul>
+</section>
+<hr>
+
+<!-- Resume Section -->
+<section id="resume">
+  <h2>Resume</h2>
+  <p>You can view and download my updated resume using the link below:</p>
+
+  <!-- Resume Plain Link -->
+  <a href="#" id="resume-link" class="plain-resume-link">
+    📄 View & Download Resume
+  </a>
+</section>
+<hr>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>If you'd like to connect or have any questions, feel free to reach out!</p>
+
+  <ul>
+    <li>☎ +91-7838674161</li>
+    <li>✉ <a href="mailto:ashutoshgarg2748@gmail.com">ashutoshgarg2748@gmail.com</a></li>
+  <li>
+  <i class="fab fa-linkedin-in"></i>
+  
+  <a href="https://linkedin.com/in/ashutosh-garg-a234781a0/" target="_blank">
+    linkedin.com/in/ashutosh-garg-a234781a0/
+  </a>
+</li>
+</ul>
+</section>
+<script>
+  const stickyProfile = document.querySelector('.sticky-profile');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      stickyProfile.classList.add('show');
+    } else {
+      stickyProfile.classList.remove('show');
+    }
+  });
+</script>
+<script>
+  // Create cursor circle
+  const cursor = document.createElement('div');
+  cursor.classList.add('cursor-circle');
+  document.body.appendChild(cursor);
+
+  // Move with mouse
+  window.addEventListener('mousemove', (e) => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+  });
+
+  // Detect clickable elements
+  const clickables = ['a', 'button', '[role="button"]', 'input', 'textarea', 'select'];
+
+  document.addEventListener('mouseover', (e) => {
+    const target = e.target;
+    if (clickables.some(sel => target.closest(sel))) {
+      cursor.style.display = 'none'; // hide custom cursor
+      document.body.style.cursor = 'pointer'; // show hand cursor
+    } else {
+      cursor.style.display = 'block';
+      document.body.style.cursor = 'none'; // hide default
+    }
+  });
+</script>
+<div class="dot-nav">
+  <a href="#home" data-label="Home" class="dot active"></a>
+  <a href="#about" data-label="About Me" class="dot"></a>
+  <a href="#projects" data-label="Projects" class="dot"></a>
+  <a href="#skills" data-label="Skills & Tools" class="dot"></a>
+  <a href="#resume" data-label="Resume" class="dot"></a>
+  <a href="#contact" data-label="Contact Me" class="dot"></a>
+</div>
+<script>
+  const sections = document.querySelectorAll("section");
+  const navDots = document.querySelectorAll(".dot-nav .dot");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navDots.forEach((dot) => {
+      dot.classList.remove("active");
+      if (dot.getAttribute("href") === `#${current}`) {
+        dot.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  document.getElementById("resume-link").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const resumeURL = "docs/Ashutosh Garg may 2025.pdf";  // ✅ Correct path to your PDF
+
+    // 1. Open in new tab
+    window.open(resumeURL, "_blank");
+
+    // 2. Trigger download
+    const link = document.createElement("a");
+    link.href = resumeURL;
+    link.download = "Ashutosh_Garg_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>
+
+</body>
+</html>
