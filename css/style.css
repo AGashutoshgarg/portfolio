@@ -6,6 +6,7 @@
 }
 /* Add this in style.css (global level) */
 html {
+  font-size: 18px;
   scroll-behavior: smooth;
 }
 
