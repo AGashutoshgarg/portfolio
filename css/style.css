@@ -293,3 +293,6 @@ hr {
   width: auto;
   filter: drop-shadow(0 0 4px rgba(0,0,0,0.3));
 }
+.typed-cursor {
+  display: none !important;
+}
